@@ -18,13 +18,12 @@ const Header = ({ activeNavItem, setActiveNavItem }) => {
     }, []);
 
     const handleScroll = () => {
-        const homeOffset = document.getElementById('home').offsetTop;
         const aboutOffset = document.getElementById('about').offsetTop;
         const skillsOffset = document.getElementById('skills').offsetTop;
         const projectsOffset = document.getElementById('projects').offsetTop;
         const contactOffset = document.getElementById('contact').offsetTop;
 
-        const scrollPosition = window.scrollY;
+        const scrollPosition = window.scrollY + 80;
 
         if (scrollPosition < aboutOffset) {
             setActiveNavItem('home');
@@ -40,9 +39,9 @@ const Header = ({ activeNavItem, setActiveNavItem }) => {
     };
 
     return (
-        <Navbar expand="lg" style={{ zIndex: "1000" }} expanded={expanded} className="bg-body-tertiary position-sticky top-0 mb-5">
-            <Container>
-                <Navbar.Brand href="#home" className="fs-2">Portfolio</Navbar.Brand>
+        <Navbar expand="lg" style={{ zIndex: "1000" }} expanded={expanded} className="bg-body-tertiary position-fixed w-100 top-0">
+            <Container >
+                <Navbar.Brand href="#home" className="fs-2" style={{ color: "#3586ff" }}>Portfolio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)}>
                     <BiMenu size={30} />
                 </ Navbar.Toggle>

@@ -8,11 +8,16 @@
   scroll-behavior: smooth;
 }
 
-.active {
-  border-bottom: 3px solid black !important;
+.active,
+.active-f {
+  border-bottom: 3px solid #3586ff !important;
   border-radius: 1px;
-  opacity: 1;
   margin-top: -5px;
+}
+
+.active-f {
+  opacity: 1 !important;
+  border-bottom: 3px solid #fff !important;
 }
 
 .heading {

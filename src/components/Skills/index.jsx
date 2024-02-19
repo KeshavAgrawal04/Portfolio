@@ -36,7 +36,7 @@ const Skills = () => {
             transition={{ duration: 1 }}
         >
             <Container>
-                <Row className="justify-content-center">
+                <Row className="justify-content-center py-5">
                     <motion.h1
                         className="text-center mb-5"
                         initial={{ opacity: 0, y: -20 }}

@@ -53,9 +53,9 @@ const Projects = () => {
     ];
 
     return (
-        <div className="py-5">
-            <Container id="projects">
-                <Row>
+        <div id="projects" className="py-5">
+            <Container>
+                <Row className="py-5">
                     <motion.h1
                         className="text-center mb-5"
                         initial={{ opacity: 0, y: -20 }}

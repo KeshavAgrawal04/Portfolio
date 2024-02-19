@@ -8,75 +8,10 @@ const Footer = ({ activeNavItem, setActiveNavItem }) => {
 
     const handleNavItemClick = (item) => {
         setActiveNavItem(item);
-        setExpanded(false);
     };
 
     return (
         <>
-            {/* <motion.footer
-                className="bg-light text-dark py-4"
-                initial={{ marginTop: 50 }}
-                animate={{ marginTop: 0 }}
-                transition={{ duration: 1, type: 'spring', stiffness: 120 }}
-            >
-                <div className="container">
-                    <div className="row d-flex justify-content-around">
-                        <div className="col-md-5 mx-auto">
-                            <h5 className="fw-bold fs-4">Explore</h5>
-                            <ul className="list-unstyled fs-5">
-                                <li><a href="#home" className="text-dark text-decoration-none">Home</a></li>
-                                <li><a href="#about" className="text-dark text-decoration-none">About</a></li>
-                                <li><a href="#skills" className="text-dark text-decoration-none">Skills</a></li>
-                                <li><a href="#projects" className="text-dark text-decoration-none">Projects</a></li>
-                                <li><a href="#contact" className="text-dark text-decoration-none">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div className="col-md-5 mx-auto">
-                            <h5 className="fw-bold fs-4">Contact Me</h5>
-                            <p className="mb-1 fs-5"><MdEmail size={28} /> keshava.bca2022@ssism.org</p>
-                            <p className="fs-5"><MdCall size={28} /> +91 8965830154</p>
-                            <div className="social-icons mt-0">
-                                <motion.a
-                                    href="https://github.com/keshavagrawal04"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.2 }}
-                                >
-                                    <FaGithub size={30} style={{ marginRight: '20px', cursor: 'pointer' }} />
-                                </motion.a>
-                                <motion.a
-                                    href="https://linkedin.com/in/keshavagrawal04"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.2 }}
-                                >
-                                    <FaLinkedin size={30} style={{ marginRight: '20px', cursor: 'pointer' }} />
-                                </motion.a>
-                                <motion.a
-                                    href="https://twitter.com/keshavagrawal04"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.2 }}
-                                >
-                                    <FaTwitter size={30} style={{ marginRight: '20px', cursor: 'pointer' }} />
-                                </motion.a>
-                                <motion.a
-                                    href="https://instagram.com/keshavagrawal04"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.2 }}
-                                >
-                                    <FaInstagram size={30} style={{ marginRight: '20px', cursor: 'pointer' }} />
-                                </motion.a>
-                            </div>
-                        </div>
-                    </div>
-                    <hr className="my-4 bg-dark" />
-                    <div className="text-center fs-4">
-                        <p className="mb-0">&copy; {new Date().getFullYear()} Keshav Agrawal. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </motion.footer> */}
             <motion.footer className="footer d-flex justify-content-center align-items-center flex-column pt-5">
                 <div className="waves">
                     <div className="wave" id="wave1"></div>
@@ -124,11 +59,11 @@ const Footer = ({ activeNavItem, setActiveNavItem }) => {
                 </div>
                 <ul className="menu">
                     <ul className="list-unstyled position-relative d-flex justify-content-center align-items-center flex-wrap">
-                        <li><a href="#home" onClick={() => handleNavItemClick('home')} className={activeNavItem === 'home' ? 'active' : ''}>Home</a></li>
-                        <li><a href="#about" onClick={() => handleNavItemClick('about')} className={activeNavItem === 'about' ? 'active' : ''}>About</a></li>
-                        <li><a href="#skills" onClick={() => handleNavItemClick('skills')} className={activeNavItem === 'skills' ? 'active' : ''}>Skills</a></li>
-                        <li><a href="#projects" onClick={() => handleNavItemClick('projects')} className={activeNavItem === 'projects' ? 'active' : ''}>Projects</a></li>
-                        <li><a href="#contact" onClick={() => handleNavItemClick('contact')} className={activeNavItem === 'contact' ? 'active' : ''}>Contact</a></li>
+                        <li><a href="#home" onClick={() => handleNavItemClick('home')} className={activeNavItem === 'home' ? 'active-f' : ''}>Home</a></li>
+                        <li><a href="#about" onClick={() => handleNavItemClick('about')} className={activeNavItem === 'about' ? 'active-f' : ''}>About</a></li>
+                        <li><a href="#skills" onClick={() => handleNavItemClick('skills')} className={activeNavItem === 'skills' ? 'active-f' : ''}>Skills</a></li>
+                        <li><a href="#projects" onClick={() => handleNavItemClick('projects')} className={activeNavItem === 'projects' ? 'active-f' : ''}>Projects</a></li>
+                        <li><a href="#contact" onClick={() => handleNavItemClick('contact')} className={activeNavItem === 'contact' ? 'active-f' : ''}>Contact</a></li>
                     </ul>
                 </ul>
                 <p className="text-center mt-1 fs-5">&copy; {new Date().getFullYear()} Keshav Agrawal | All Rights Reserved.</p>

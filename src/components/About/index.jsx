@@ -5,13 +5,13 @@ import logo from '../../assets/logo.png';
 
 const About = () => {
     return (
-        <div className="py-5">
-            <Container id="about">
-                <Row className="align-items-center">
+        <div id="about" className="py-5">
+            <Container>
+                <Row className="align-items-center py-5">
                     <Col md={6} className="text-center text-md-start">
                         <motion.img
                             src={logo}
-                            className="border rounded-circle mb-4 mb-md-0"
+                            className="border rounded-circle mb-4 mb-md-0 d-none d-md-block"
                             alt="logo"
                             width={"300px"}
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -21,7 +21,7 @@ const About = () => {
                     </Col>
                     <Col md={6} className="d-flex flex-column align-items-center align-items-md-start">
                         <motion.h1
-                            className="text-center text-md-start mb-4"
+                            className="text-center text-md-start mb-5"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}

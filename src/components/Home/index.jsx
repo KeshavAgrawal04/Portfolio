@@ -19,8 +19,8 @@ const Home = () => {
     }
 
     return (
-        <div className="py-5 min-h-100">
-            <Container id="home">
+        <div id="home" className="py-5">
+            <Container className='py-5 my-5'>
                 <Row className="align-items-center">
                     <Col md={6} className="text-center text-md-start">
                         <motion.div

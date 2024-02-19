@@ -25,88 +25,95 @@ const Contact = () => {
     }
 
     return (
-        <div id="contact" className="py-5 mb-5">
-            <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                <div className="container">
-                    <div className="row justify-content-center align-items-center">
-                        <div className="col-md-6 d-none d-md-block">
-                            <motion.img
-                                src={contact}
-                                alt="Contact Image"
-                                className="img-fluid"
-                                initial={{ opacity: 0, x: 50 }}
-                                animate={{ opacity: 1, x: 0 }}
+        <motion.div
+            id="contact"
+            className="py-5"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className="container">
+                <div className="row justify-content-center align-items-center py-5">
+                    <div className="col-md-6">
+                        <motion.h1
+                            className="text-center mb-5"
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                        >
+                            <span className="heading">Contact Me</span>
+                        </motion.h1>
+                        <form onSubmit={handleSubmit}>
+                            <div className="mb-3">
+                                <div className="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="name"
+                                        placeholder=""
+                                        value={name}
+                                        onChange={handleNameChange}
+                                    />
+                                    <label htmlFor="name">Enter your name</label>
+                                </div>
+                            </div>
+
+                            <div className="mb-3">
+                                <div className="form-floating mb-3">
+                                    <input
+                                        type="email"
+                                        value={email}
+                                        onChange={handleEmailChange}
+                                        className="form-control"
+                                        id="email"
+                                        placeholder="" />
+                                    <label htmlFor="email">Enter your email</label>
+                                </div>
+                            </div>
+
+                            <div className="mb-3">
+                                <div className="form-floating">
+                                    <textarea
+                                        className="form-control"
+                                        placeholder=""
+                                        id="message"
+                                        style={{ height: "150px", resize: "none" }}
+                                        value={message}
+                                        onChange={handleMessageChange}
+                                    />
+                                    <label htmlFor="message">Enter your message</label>
+                                </div>
+                            </div>
+
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, delay: 0.4 }}
-                            />
-                        </div>
-                        <div className="col-md-6">
-                            <motion.h1
-                                className="text-center mb-5"
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
                             >
-                                <span className="heading">Contact Me</span>
-                            </motion.h1>
-                            <form onSubmit={handleSubmit}>
-                                <div className="mb-3">
-                                    <div className="form-floating mb-3">
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="name"
-                                            placeholder=""
-                                            value={name}
-                                            onChange={handleNameChange}
-                                        />
-                                        <label htmlFor="name">Enter your name</label>
-                                    </div>
-                                </div>
-
-                                <div className="mb-3">
-                                    <div className="form-floating mb-3">
-                                        <input
-                                            type="email"
-                                            value={email}
-                                            onChange={handleEmailChange}
-                                            className="form-control"
-                                            id="email"
-                                            placeholder="" />
-                                        <label htmlFor="email">Enter your email</label>
-                                    </div>
-                                </div>
-
-                                <div className="mb-3">
-                                    <div className="form-floating">
-                                        <textarea
-                                            className="form-control"
-                                            placeholder=""
-                                            id="message"
-                                            style={{ height: "150px", resize: "none" }}
-                                            value={message}
-                                            onChange={handleMessageChange}
-                                        />
-                                        <label htmlFor="message">Enter your message</label>
-                                    </div>
-                                </div>
-
-                                <motion.div
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.5, delay: 0.4 }}
+                                <motion.button
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 0.3 }}
+                                    type="submit"
+                                    className="btn btn-primary btn-lg"
                                 >
-                                    <button type="submit" className="btn btn-primary">Send</button>
-                                </motion.div>
-                            </form>
-                        </div>
+                                    Send
+                                </motion.button>
+                            </motion.div>
+                        </form>
+                    </div>
+                    <div className="col-md-6 d-none d-md-block">
+                        <motion.img
+                            src={contact}
+                            alt="Contact Image"
+                            className="img-fluid"
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                        />
                     </div>
                 </div>
-            </motion.div>
-        </div>
+            </div>
+        </motion.div>
     );
 }
 
