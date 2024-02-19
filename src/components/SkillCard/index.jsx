@@ -16,7 +16,7 @@ const SkillCard = ({ icon, text }) => {
                 {icon}
             </div>
             <div className="z-1">
-                <h2 style={{ letterSpacing: "2px" }} className="fs-5 fw-bold text text-center">{text}</h2>
+                <h2 style={{ letterSpacing: "2px", color: '#3586ff' }} className="fs-5 fw-bold text text-center">{text}</h2>
             </div>
         </motion.div>
     );

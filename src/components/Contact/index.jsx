@@ -50,7 +50,7 @@ const Contact = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                             >
-                                Contact Us
+                                <span className="heading">Contact Me</span>
                             </motion.h1>
                             <form onSubmit={handleSubmit}>
                                 <div className="mb-3">

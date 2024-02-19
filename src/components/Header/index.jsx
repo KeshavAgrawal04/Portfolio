@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BiMenu } from 'react-icons/bi';
 
@@ -10,8 +10,37 @@ const Header = ({ activeNavItem, setActiveNavItem }) => {
         setExpanded(false);
     };
 
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        const homeOffset = document.getElementById('home').offsetTop;
+        const aboutOffset = document.getElementById('about').offsetTop;
+        const skillsOffset = document.getElementById('skills').offsetTop;
+        const projectsOffset = document.getElementById('projects').offsetTop;
+        const contactOffset = document.getElementById('contact').offsetTop;
+
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition < aboutOffset) {
+            setActiveNavItem('home');
+        } else if (scrollPosition >= aboutOffset && scrollPosition < skillsOffset) {
+            setActiveNavItem('about');
+        } else if (scrollPosition >= skillsOffset && scrollPosition < projectsOffset) {
+            setActiveNavItem('skills');
+        } else if (scrollPosition >= projectsOffset && scrollPosition < contactOffset) {
+            setActiveNavItem('projects');
+        } else {
+            setActiveNavItem('contact');
+        }
+    };
+
     return (
-        <Navbar expand="lg" style={{ zIndex: "1000" }} expanded={expanded} className="bg-body-tertiary position-sticky top-0">
+        <Navbar expand="lg" style={{ zIndex: "1000" }} expanded={expanded} className="bg-body-tertiary position-sticky top-0 mb-5">
             <Container>
                 <Navbar.Brand href="#home" className="fs-2">Portfolio</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)}>

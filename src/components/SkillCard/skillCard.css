@@ -4,20 +4,25 @@
 
 .skill-card {
     overflow: hidden;
+    border: 4px solid #3586ff !important;
 }
 
-.skill-card::before {
-    position: absolute;
+/* .skill-card:hover {
+    background-color: ;
+} */
+
+/* .skill-card::before { */
+/* position: absolute;
     content: '';
     width: 100%;
     height: 100%;
-    background: #222;
-    /* transform: rotate(45deg); */
+    background: #3586ff;
+    transform: rotate(45deg);
 }
 
 .skill-card:hover::before {
     animation: animate 2s linear infinite;
-}
+} */
 
 @keyframes animate {
     from {
@@ -29,9 +34,22 @@
     }
 }
 
-.skill-card::after {
+/* .skill-card::after {
     position: absolute;
     content: '';
     inset: 5px;
     background: #fff;
+} */
+
+.skill-card:hover {
+    background-color: #3586ff !important;
+    border: 4px solid #fff;
+}
+
+.skill-card:hover .text {
+    color: #fff !important;
+}
+
+.skill-card:hover .icon {
+    color: #fff !important;
 }

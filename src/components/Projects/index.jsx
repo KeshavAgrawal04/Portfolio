@@ -53,23 +53,25 @@ const Projects = () => {
     ];
 
     return (
-        <Container id="projects" className="py-5">
-            <Row>
-                <motion.h1
-                    className="text-center mb-5"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    Projects
-                </motion.h1>
-            </Row>
-            <Row className="d-flex justify-content-center px-3">
-                {projectsArray.map((project, index) => (
-                    <ProjectCard key={index} project={project} />
-                ))}
-            </Row>
-        </Container>
+        <div className="py-5">
+            <Container id="projects">
+                <Row>
+                    <motion.h1
+                        className="text-center mb-5"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <span className="heading">Projects</span>
+                    </motion.h1>
+                </Row>
+                <Row className="d-flex justify-content-center px-3">
+                    {projectsArray.map((project, index) => (
+                        <ProjectCard key={index} project={project} />
+                    ))}
+                </Row>
+            </Container>
+        </div>
     );
 };
 

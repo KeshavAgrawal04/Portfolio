@@ -9,17 +9,22 @@ import { SiExpress } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 
 const Skills = () => {
+    const cardStyle = {
+        fontSize: "5rem",
+        color: "#3586ff"
+    };
+
     const skillsArray = [
-        { icon: <FaHtml5 style={{ fontSize: "5rem" }} />, text: "HTML" },
-        { icon: <FaCss3Alt style={{ fontSize: "5rem" }} />, text: "CSS" },
-        { icon: <IoLogoJavascript style={{ fontSize: "5rem" }} />, text: "JavaScript" },
-        { icon: <FaBootstrap style={{ fontSize: "5rem" }} />, text: "Bootstrap" },
-        { icon: <FaReact style={{ fontSize: "5rem" }} />, text: "React JS" },
-        { icon: <FaNode style={{ fontSize: "5rem" }} />, text: "Node JS" },
-        { icon: <SiExpress style={{ fontSize: "5rem" }} />, text: "Express JS" },
-        { icon: <DiMongodb style={{ fontSize: "5rem" }} />, text: "MongoDB" },
-        { icon: <FaGitAlt style={{ fontSize: "5rem" }} />, text: "Git" },
-        { icon: <FaAws style={{ fontSize: "5rem" }} />, text: "AWS" }
+        { icon: <FaHtml5 className="icon" style={cardStyle} />, text: "HTML" },
+        { icon: <FaCss3Alt className="icon" style={cardStyle} />, text: "CSS" },
+        { icon: <IoLogoJavascript className="icon" style={cardStyle} />, text: "JavaScript" },
+        { icon: <FaBootstrap className="icon" style={cardStyle} />, text: "Bootstrap" },
+        { icon: <FaReact className="icon" style={cardStyle} />, text: "React JS" },
+        { icon: <FaNode className="icon" style={cardStyle} />, text: "Node JS" },
+        { icon: <SiExpress className="icon" style={cardStyle} />, text: "Express JS" },
+        { icon: <DiMongodb className="icon" style={cardStyle} />, text: "MongoDB" },
+        { icon: <FaGitAlt className="icon" style={cardStyle} />, text: "Git" },
+        { icon: <FaAws className="icon" style={cardStyle} />, text: "AWS" }
     ];
 
     return (
@@ -38,7 +43,7 @@ const Skills = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        Skills
+                        <span className="heading">Skills</span>
                     </motion.h1>
                 </Row>
                 <Row className="d-flex justify-content-center gap-4">

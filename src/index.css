@@ -11,7 +11,14 @@
 .active {
   border-bottom: 3px solid black !important;
   border-radius: 1px;
+  opacity: 1;
   margin-top: -5px;
+}
+
+.heading {
+  border-bottom: 4px solid #3586ff;
+  border-radius: 1px;
+  letter-spacing: 2px;
 }
 
 input,

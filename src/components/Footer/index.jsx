@@ -77,7 +77,7 @@ const Footer = ({ activeNavItem, setActiveNavItem }) => {
                     </div>
                 </div>
             </motion.footer> */}
-            <motion.footer className="footer d-flex justify-content-center align-items-center flex-column">
+            <motion.footer className="footer d-flex justify-content-center align-items-center flex-column pt-5">
                 <div className="waves">
                     <div className="wave" id="wave1"></div>
                     <div className="wave" id="wave2"></div>
