@@ -14,27 +14,30 @@ const About = () => {
                             className="border rounded-circle mb-4 mb-md-0 d-none d-md-block"
                             alt="logo"
                             width={"300px"}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
+                            variants={{ hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1, transition: { duration: 0.5 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                         />
                     </Col>
                     <Col md={6} className="d-flex flex-column align-items-center align-items-md-start">
                         <motion.h1
                             className="text-center text-md-start mb-5"
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
                             style={{ margin: '0 auto' }}
+                            variants={{ hidden: { opacity: 0, y: -20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                         >
                             <span className="heading">About Me</span>
                         </motion.h1>
                         <motion.p
                             className="fs-4"
+                            variants={{ hidden: { opacity: 0, y: -20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                             style={{ textAlign: "justify" }}
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
                         >
                             I am currently pursuing BCA with a good understanding of backend development.
                             My short-term goal is to become a Backend Developer, and my long-term goal is

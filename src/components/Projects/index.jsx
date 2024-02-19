@@ -58,9 +58,11 @@ const Projects = () => {
                 <Row className="py-5">
                     <motion.h1
                         className="text-center mb-5"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
+                        variants={{ hidden: { opacity: 0, y: -20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: false, amount: 0.7 }}
                     >
                         <span className="heading">Projects</span>
                     </motion.h1>

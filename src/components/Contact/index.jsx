@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { BiSend } from 'react-icons/bi';
 import contact from '../../assets/contact.png';
 
 const Contact = () => {
@@ -28,18 +29,20 @@ const Contact = () => {
         <motion.div
             id="contact"
             className="py-5"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            variants={{ hidden: { opacity: 0, y: -50 }, show: { opacity: 1, y: 0, transition: { duration: 0.5, delay: .2 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.7 }}
         >
             <div className="container">
                 <div className="row justify-content-center align-items-center py-5">
                     <div className="col-md-6">
                         <motion.h1
                             className="text-center mb-5"
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            variants={{ hidden: { opacity: 0, y: -20 }, show: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                         >
                             <span className="heading">Contact Me</span>
                         </motion.h1>
@@ -86,29 +89,31 @@ const Contact = () => {
                             </div>
 
                             <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 0.4 }}
+                                variants={{ hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.4 } } }}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: false, amount: 0.7 }}
                             >
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.3 }}
                                     type="submit"
-                                    className="btn btn-primary btn-lg"
+                                    className="btn btn-primary btn-md"
                                 >
-                                    Send
+                                    <BiSend size={20} style={{ marginRight: '5px' }} /> Send Email
                                 </motion.button>
                             </motion.div>
                         </form>
                     </div>
                     <div className="col-md-6 d-none d-md-block">
                         <motion.img
+                            variants={{ hidden: { opacity: 0, x: 50, y: 0 }, show: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.4 } } }}
                             src={contact}
                             alt="Contact Image"
                             className="img-fluid"
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                         />
                     </div>
                 </div>

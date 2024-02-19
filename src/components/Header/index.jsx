@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BiMenu } from 'react-icons/bi';
 
-const Header = ({ activeNavItem, setActiveNavItem }) => {
+const Header = () => {
+    const [activeNavItem, setActiveNavItem] = useState('home');
     const [expanded, setExpanded] = useState(false);
 
     const handleNavItemClick = (item) => {

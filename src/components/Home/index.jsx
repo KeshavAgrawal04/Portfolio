@@ -24,9 +24,10 @@ const Home = () => {
                 <Row className="align-items-center">
                     <Col md={6} className="text-center text-md-start">
                         <motion.div
-                            initial={{ opacity: 0, y: -50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
+                            variants={{ hidden: { opacity: 0, y: -50 }, show: { opacity: 1, y: 0, transition: { duration: 1 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                         >
                             <h2 className="fs-1 mb-3">Hello 👋, It's Me</h2>
                             <h1 style={{ fontSize: '52px', color: "#3586ff" }}>Keshav Agrawal</h1>
@@ -50,9 +51,10 @@ const Home = () => {
                             </h2>
                         </motion.div>
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 1 }}
+                            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 1 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                         >
                             <div className="social-icons-home mt-2">
                                 <motion.a
@@ -94,7 +96,7 @@ const Home = () => {
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.3 }}
-                                    className="mt-3 btn btn-primary btn-lg"
+                                    className="mt-3 btn btn-primary btn-md"
                                     onClick={handleDownload}
                                 >
                                     <FiDownload className="me-2" />
@@ -105,10 +107,11 @@ const Home = () => {
                     </Col>
                     <Col md={6} className="text-center">
                         <motion.div
-                            initial={{ opacity: 0, scale: 1 }}
                             whileHover={{ scale: 1.1 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3 }}
+                            variants={{ hidden: { opacity: 0, scale: 1 }, show: { opacity: 1, scale: 1, transition: { duration: 0.3 } } }}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: false, amount: 0.7 }}
                             className="interactive-image"
                         >
                             <img src={logo} alt="logo" width={300} />
