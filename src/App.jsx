@@ -1,7 +1,14 @@
-import { Header, Home, About, Skills, Projects, Contact, Footer } from "./components";
+import {
+  Header,
+  Home,
+  About,
+  Skills,
+  Projects,
+  Contact,
+  Footer,
+} from "./components";
 
 const App = () => {
-
   return (
     <>
       <Header />
@@ -12,7 +19,7 @@ const App = () => {
       <Contact />
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default App;
