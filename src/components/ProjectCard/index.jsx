@@ -54,7 +54,7 @@ const ProjectCard = ({ project }) => {
           target="_blank"
         >
           <AiOutlineEye className="me-2" />
-          Demo
+          Preview
         </motion.a>
       </motion.div>
     </motion.div>

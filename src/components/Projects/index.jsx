@@ -23,7 +23,7 @@ const Projects = () => {
       description:
         "The User Management System API is designed to handle user-related operations, providing endpoints to manage user registration, authentication, profile management, and access control. Also authorized using JSON Web Token.",
       coverImage: project2,
-      preview: "https://user-management-system-two.vercel.app/",
+      preview: "https://user-management-system-new.vercel.app/",
       dates: "DEC 2023",
       technologies: ["React JS", "Node JS"],
     },
