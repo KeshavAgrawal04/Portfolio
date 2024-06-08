@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../../assets/logo.png";
-import resumePdf from "../../../public/Keshav_Agrawal_Resume.pdf";
+import resumePdf from "../../assets/Keshav_Agrawal_Resume.pdf";
 
 const Home = () => {
   const handleDownload = (e) => {
