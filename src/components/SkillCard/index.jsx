@@ -15,7 +15,7 @@ const SkillCard = ({ icon, text }) => {
       <div className="z-1">
         <h2
           style={{ letterSpacing: "2px", color: "#3586ff" }}
-          className="fs-5 fw-bold text text-center"
+          className="font-size fw-bold text text-center"
         >
           {text}
         </h2>
