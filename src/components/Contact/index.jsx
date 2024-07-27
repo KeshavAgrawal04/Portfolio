@@ -30,10 +30,8 @@ const Contact = () => {
       id="contact"
       className="py-5"
       variants={{
-        hidden: { opacity: 0, y: -50 },
         show: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } },
       }}
-      initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.7 }}
     >

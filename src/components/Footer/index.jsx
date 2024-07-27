@@ -61,15 +61,14 @@ const Footer = () => {
         </ul>
         <div className="d-flex justify-content-center align-items-center flex-wrap gap-3">
           <p className="fs-5">
-            <MdEmail size={28} /> keshava.bca2022@ssism.org
+            <MdEmail size={28} /> keshavagrawal1123@gmail.com
           </p>
           <p className="fs-5">
             <MdCall size={28} /> +91 8965830154
           </p>
         </div>
         <p className="text-center mt-1 fs-5">
-          &copy; {new Date().getFullYear()} Keshav Agrawal | All Rights
-          Reserved.
+          &copy; {new Date().getFullYear()} Keshav Agrawal
         </p>
       </motion.footer>
     </>

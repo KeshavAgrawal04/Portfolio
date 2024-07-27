@@ -1,18 +1,22 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
-import logo from "../../assets/logo.png";
+import profileImage from "../../assets/profileImage.png";
 
 const About = () => {
   return (
     <div id="about" className="py-5">
       <Container>
         <Row className="align-items-center py-5">
-          <Col md={6} className="text-center text-md-start">
+          <Col
+            md={6}
+            className="text-center text-md-start d-flex justify-content-center align-items-center mt-5 h-100"
+          >
             <motion.img
-              src={logo}
+              src={profileImage}
+              width={300}
               className="border rounded-circle mb-4 mb-md-0 d-none d-md-block"
               alt="logo"
-              width={"300px"}
+              whileHover={{ scale: 1.1 }}
               variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },

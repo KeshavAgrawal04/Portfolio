@@ -7,16 +7,16 @@ import {
   FaBootstrap,
   FaReact,
   FaGitAlt,
-  FaAws,
 } from "react-icons/fa";
 import { FaNode } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript, SiTailwindcss, SiGithub } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 
 const Skills = () => {
   const cardStyle = {
-    fontSize: "5rem",
+    fontSize: "4rem",
     color: "#3586ff",
   };
 
@@ -28,8 +28,16 @@ const Skills = () => {
       text: "JavaScript",
     },
     {
+      icon: <SiTypescript className="icon" style={cardStyle} />,
+      text: "TypeScript",
+    },
+    {
       icon: <FaBootstrap className="icon" style={cardStyle} />,
       text: "Bootstrap",
+    },
+    {
+      icon: <SiTailwindcss className="icon" style={cardStyle} />,
+      text: "Tailwindcss",
     },
     { icon: <FaReact className="icon" style={cardStyle} />, text: "React JS" },
     { icon: <FaNode className="icon" style={cardStyle} />, text: "Node JS" },
@@ -39,7 +47,7 @@ const Skills = () => {
     },
     { icon: <DiMongodb className="icon" style={cardStyle} />, text: "MongoDB" },
     { icon: <FaGitAlt className="icon" style={cardStyle} />, text: "Git" },
-    { icon: <FaAws className="icon" style={cardStyle} />, text: "AWS" },
+    { icon: <SiGithub className="icon" style={cardStyle} />, text: "GitHub" },
   ];
 
   return (

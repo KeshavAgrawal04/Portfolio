@@ -1,0 +1,10 @@
+#heroImg {
+  width: 420px;
+}
+
+@media screen and (max-width: 768px) {
+  #heroImg {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

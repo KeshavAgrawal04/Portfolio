@@ -3,8 +3,9 @@ import { FiDownload } from "react-icons/fi";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
-import logo from "../../assets/logo.png";
+import blobProfile from "../../assets/blobProfile.png";
 import resumePdf from "../../../public/Keshav_Agrawal_Resume.pdf";
+import "./style.css";
 
 const Home = () => {
   const handleDownload = (e) => {
@@ -123,19 +124,22 @@ const Home = () => {
             </motion.div>
           </Col>
           <Col md={6} className="text-center">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              variants={{
-                hidden: { opacity: 0, scale: 1 },
-                show: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
-              }}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.7 }}
-              className="interactive-image"
-            >
-              <img src={logo} alt="logo" width={300} />
-            </motion.div>
+            <div>
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                variants={{
+                  hidden: { opacity: 0, scale: 1 },
+                  show: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+                }}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.7 }}
+                className="interactive-image"
+                src={blobProfile}
+                alt="logo"
+                id="heroImg"
+              />
+            </div>
           </Col>
         </Row>
       </Container>
